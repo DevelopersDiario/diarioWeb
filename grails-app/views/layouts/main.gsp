@@ -24,6 +24,9 @@
 
 
 	<asset:stylesheet type="text/css" src="css/bootstrap.css"/>
+
+    <asset:stylesheet type="text/css"
+                      src="css/wonder/one-page-wonder.min.css"/> <!--Wonder es el template principal del main-->
 	%{--<asset:stylesheet type="text/css" src="css/bootstrapmdb/mdb.min.css"/>--}%
 	<asset:stylesheet type="text/css" src="css/colors/gradient.css"/>
 	%{--<asset:stylesheet type="text/css" src="css/main.css"/>--}%
@@ -81,60 +84,54 @@
         var CONTEXT_ROOT = '${request.getContextPath()}';
 	</script>
 </head>
-<header class="container-fluid">
-	<div class="row" style="padding-top: 40px; /*25px;*/">
-	</div>
+
+<body>
+<header class="masthead text-center text-white">
+    <div class="masthead-content">
+        <div class="container">
+            <h1 class="masthead-heading mb-0">Didactics</h1>
+
+            <h2 class="masthead-subheading mb-0">AMDI</h2>
+            <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5"><i class="fab fa-twitter-square"></i></a>
+            <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5"><i class="fab fa-facebook"></i></a>
+        </div>
+    </div>
+
+    <div class="bg-circle-5 bg-circle"></div>
 </header>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    %{--Barra de navegacion que se mostrara despues del logueo del usuario--}%
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-        </ul>
-        %{--form search--}%
-        <!--<form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>-->
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">AMDI</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Log In</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
-<body class="responsive">
-<div id="main" style=" margin-top:80px;">
 
-%{--Contenedor donde se incluiran las vistas posteriores--}%
-	<div id="main-container">
-		<span v-html="mainContainer"></span>
+<div id="main">
 
-	</div>
-	<footer>
-%{--Aqui agregaremos el pie de pagina --}%
-	</footer>
+    %{--Contenedor donde se incluiran las vistas posteriores--}%
+    <div id="main-container">
+        <span v-html="mainContainer"></span>
+    </div>
+    <footer>
+        %{--Aqui agregaremos el pie de pagina --}%
+    </footer>
 
 </div>
-
 <asset:javascript src="plugins/bootstrapmdb/mdb.js"/>
 </body>
 </html>
