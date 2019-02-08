@@ -96,7 +96,6 @@
             <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5"><i class="fab fa-facebook"></i></a>
         </div>
     </div>
-
     <div class="bg-circle-5 bg-circle"></div>
 </header>
 <!-- Navigation -->
@@ -107,18 +106,18 @@
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="#">Sign Up</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Log In</a>
+                    <a class="nav-link" href="loguin">Log In</a>
                 </li>
             </ul>
         </div>
     </div>
+
 </nav>
 
 <div id="main">
@@ -126,6 +125,7 @@
     %{--Contenedor donde se incluiran las vistas posteriores--}%
     <div id="main-container">
         <span v-html="mainContainer"></span>
+        <g:include view="login/form.gsp"></g:include>
     </div>
     <footer>
         %{--Aqui agregaremos el pie de pagina --}%
