@@ -45,6 +45,8 @@
     <asset:javascript src="plugins/jquery.mixitup.js"/>
     <asset:javascript src="plugins/wow.js"/>
     <asset:javascript src="plugins/owl.carousel.js"/>
+    <asset:stylesheet type="text/css" src="css/loguin/slider.css"/>
+
     <%-- <asset:javascript src="plugins/waypoints.min.js"/>  --%>
     <asset:javascript src="plugins/jquery.counterup.min.js"/>
     <asset:javascript src="plugins/jquery.slicknav.js"/>
@@ -64,6 +66,7 @@
     <asset:javascript src="plugins/moment.js"/>
     <asset:javascript src="plugins/jquery.twbsPagination.js"/>
     <asset:javascript src="plugins/sweet-alert/assets/sweetalert/sweetalert.min.js"/>
+    <asset:javascript src="plugins/slider.js"/>
 
     <link rel="shortcut icon" href="${resource(dir: 'images', file: 'didactics.png')}" type="image/x-icon">
     <title>AMDI</title>
@@ -101,6 +104,88 @@
             </div>
         </div>
     </nav>
+
+    <div class="slider-container">
+        <div class="slider-control left inactive"></div>
+
+        <div class="slider-control right"></div>
+        <ul class="slider-pagi"></ul>
+
+        <div class="slider">
+            <div class="slide slide-0 active">
+                <div class="slide__bg"></div>
+
+                <div class="slide__content">
+                    <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                        <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405"/>
+                    </svg>
+
+                    <div class="slide__text">
+                        <h2 class="slide__text-heading">Project name 1</h2>
+
+                        <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
+                        <a href="http://hkmbhutto.wix.com/abdulrasheed"
+                           class="slide__text-link">Project link</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide slide-1 ">
+                <div class="slide__bg"></div>
+
+                <div class="slide__content">
+                    <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                        <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405"/>
+                    </svg>
+
+                    <div class="slide__text">
+                        <h2 class="slide__text-heading">Project name 2</h2>
+
+                        <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
+                        <a href="http://hkmbhutto.wix.com/abdulrasheed"
+                           class="slide__text-link">Project link</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide slide-2">
+                <div class="slide__bg"></div>
+
+                <div class="slide__content">
+                    <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                        <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405"/>
+                    </svg>
+
+                    <div class="slide__text">
+                        <h2 class="slide__text-heading">Project name 3</h2>
+
+                        <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
+                        <a href="http://hkmbhutto.wix.com/abdulrasheed"
+                           class="slide__text-link">Project link</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide slide-3">
+                <div class="slide__bg"></div>
+
+                <div class="slide__content">
+                    <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                        <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405"/>
+                    </svg>
+
+                    <div class="slide__text">
+                        <h2 class="slide__text-heading">Project name 4</h2>
+
+                        <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
+                        <a href="http://hkmbhutto.wix.com/abdulrasheed"
+                           class="slide__text-link">Project link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Loguin Modal -->
     <div class="modal fade" id="loginForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
          aria-hidden="true">
@@ -220,9 +305,6 @@
 
     <div class="bg-circle-5 bg-circle"></div>
 
-    <div class="">
-        <p>idhdfh</p>
-    </div>
 </header>
 
 
