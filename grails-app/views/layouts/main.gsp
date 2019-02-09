@@ -86,47 +86,44 @@
 </head>
 
 <body>
-<header class="masthead text-center text-white">
-    <div class="masthead-content">
-        <div class="container">
-            <h1 class="masthead-heading mb-0">Didactics</h1>
-
-            <h2 class="masthead-subheading mb-0">AMDI</h2>
-            <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5"><i class="fab fa-twitter-square"></i></a>
-            <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5"><i class="fab fa-facebook"></i></a>
-        </div>
-    </div>
-    <div class="bg-circle-5 bg-circle"></div>
-</header>
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="#">AMDI</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Sign Up</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="loguin">Log In</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-</nav>
-
 <div id="main">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">AMDI</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    %{--Contenedor donde se incluiran las vistas posteriores--}%
-    <div id="main-container">
-        <span v-html="mainContainer"></span>
-        <g:include view="login/form.gsp"></g:include>
-    </div>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="modal" href="loginRegister"
+                           data-target="#loginRegister">perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="modal" href="loginForm" data-target="#loginForm">nosotros</a>
+                    </li>
+                    <li>
+                        <a class=" nav-link" href="${createLink(controller: 'logout', action: 'index')}"><i
+                                class="fa fa-sign-out-alt" aria-hidden="true"></i> Salir
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <header class=" masthead text-center text-white">
+        %{--Contenedor donde se incluiran las vistas posteriores--}%
+        <div id="main-container " class="bg-circle-5 bg-circle">
+            <span v-html="mainContainer"></span>
+
+        </div>
+
+    </header>
+
     <footer>
         %{--Aqui agregaremos el pie de pagina --}%
     </footer>
@@ -135,3 +132,8 @@
 <asset:javascript src="plugins/bootstrapmdb/mdb.js"/>
 </body>
 </html>
+<script type='text/javascript'>
+    (function () {
+        new WOW().init();
+    })();
+</script>
