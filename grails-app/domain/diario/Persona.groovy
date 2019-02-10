@@ -16,6 +16,8 @@ class Persona {
     Date dateCreated
     Date lastUpdated
     Boolean enabled
+    static hasMany = [publicaciones: Publicacion, grupos: Grupo]
+    static belongsTo = [Grupo, Publicacion]
 
     static constraints = {
         nombre nullable: true
@@ -30,6 +32,7 @@ class Persona {
         telefonoOpcional nullable: true
     }
     static mapping = {
+        publicaciones fetch: "join"
         id generator: 'increment'
     }
 }

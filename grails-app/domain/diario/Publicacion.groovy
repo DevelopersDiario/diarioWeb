@@ -11,11 +11,11 @@ class Publicacion {
     String planAccion
     String titulo
     String observaciones
-    Publicacion publicacion
     Date dateCreated
     Date lastUpdated
 
-
+    static hasMany = [publicaciones: Publicacion]
+    static belongsTo = [persona: Persona]
     static constraints = {
         usuario nullable: false
         sentimiento nullable: true
@@ -25,7 +25,8 @@ class Publicacion {
         planAccion nullable: true
         titulo nullable: true
         observaciones nullable: true
-        publicacion nullable: false
+        publicaciones nullable: false
+        persona nullable: false
     }
     static mapping = {
         id generator: 'increment'

@@ -10,16 +10,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
 
 	<link rel="shortcut icon" href="${resource(dir: 'images', file: 'didactic.ico')}" type="image/x-icon">
-	<title>AMDI</title>
-	<meta name="title" content="AMDI" />
+    <title>Didactic</title>
+    <meta name="title" content="Didactic"/>
 	<!-- <meta name="description" content="" />-->
 	<!--<meta name="keywords" content="" />-->
 	<meta http-equiv="content-language" content="es_MX" />
 	<meta name="robots" content="index, follow" />
 	<!--  <link rel="canonical" href="http://" />-->
-	<meta name="author" content="AMDI" />
-	<meta property="og:title" content="AMDI" />
-	<meta property="og:site_name" content="AMDI" />
+    <meta name="author" content="Didactic"/>
+    <meta property="og:title" content="Didactic"/>
+    <meta property="og:site_name" content="Didactic"/>
 	<!-- <meta name="url" content="http://" />-->
 
 
@@ -86,49 +86,18 @@
 </head>
 
 <body>
-<div id="main">
+
+<g:hiddenField name="urlroot" value="urlroot" data-url='${createLink(uri: "/")}' id="urlroot"/>
+<g:hiddenField name="urlconfig" value="urlconfig"
+               data-url="${createLink(controller: 'director', action: 'getConfiguracion')}" id="urlconfig"/>
+<g:layoutBody/>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">AMDI</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="modal" href="loginRegister"
-                           data-target="#loginRegister">perfil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="modal" href="loginForm" data-target="#loginForm">nosotros</a>
-                    </li>
-                    <li>
-                        <a class=" nav-link" href="${createLink(controller: 'logout', action: 'index')}"><i
-                                class="fa fa-sign-out-alt" aria-hidden="true"></i> Salir
-                        </a>
-                    </li>
-                </ul>
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
 
-            </div>
-        </div>
-    </nav>
-    <header class=" masthead text-center text-white">
-        %{--Contenedor donde se incluiran las vistas posteriores--}%
-        <div id="main-container " class="bg-circle-5 bg-circle">
-            <span v-html="mainContainer"></span>
+    <g:include view="layouts/menu.gsp"></g:include>
+</nav>
 
-        </div>
-
-    </header>
-
-    <footer>
-        %{--Aqui agregaremos el pie de pagina --}%
-    </footer>
-
-</div>
 <asset:javascript src="plugins/bootstrapmdb/mdb.js"/>
 </body>
 </html>

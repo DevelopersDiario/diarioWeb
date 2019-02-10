@@ -73,7 +73,7 @@ svg {
 .slider-pagi__elem {
     position: relative;
     display: inline-block;
-    vertical-align: top;
+    vertical-align: centerslide__text-desc;
     width: 2rem;
     height: 2rem;
     margin: 0 0.5rem;

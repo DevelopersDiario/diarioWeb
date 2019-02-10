@@ -69,23 +69,24 @@
     <asset:javascript src="plugins/slider.js"/>
 
     <link rel="shortcut icon" href="${resource(dir: 'images', file: 'didactics.png')}" type="image/x-icon">
-    <title>AMDI</title>
-    <meta name="title" content="AMDI"/>
+    <title>Didactic</title>
+    <meta name="title" content="Didactic"/>
     <!--<meta name="description" content="" />-->
     <meta name="keywords" content=""/>
     <meta http-equiv="content-language" content="es_MX"/>
     <meta name="robots" content="index, follow"/>
     <!-- <link rel="canonical" href="http://" />-->
-    <meta name="author" content="AMDI"/>
-    <meta property="og:title" content="AMDI"/>
-    <meta property="og:site_name" content="AMDI"/>
+    <meta name="author" content="Didactic"/>
+    <meta property="og:title" content="Didactic"/>
+    <meta property="og:site_name" content="Didactic"/>
     <!-- <meta name="url" content="http://" />-->
 </head>
 <header class="masthead text-center text-white">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">AMDI</a>
+            <img src="${resource(dir: 'images', file: 'didactico.png')}">
+            <a class="navbar-brand text-info">Didactic</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -105,6 +106,7 @@
         </div>
     </nav>
 
+    <div class="row-fluid">
     <div class="slider-container">
         <div class="slider-control left inactive"></div>
 
@@ -185,6 +187,8 @@
             </div>
         </div>
     </div>
+    </div>
+
 
     <!-- Loguin Modal -->
     <div class="modal fade" id="loginForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -245,63 +249,6 @@
         </div>
     </div>
 
-    <div class="modal fade" id="loginRegister" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-         aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered " role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-
-                <div class="modal-body">
-                    <form action='${postUrl}' method='POST' id="loguin">
-
-                        <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-user"></i></span>
-                            </div>
-                            <input type="text" class="form-control" name='j_username' id='username'
-                                   placeholder="Usuario">
-
-                        </div>
-
-                        <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-key"></i></span>
-                            </div>
-                            <input type="password" class="form-control" name='j_password' id='password'
-                                   placeholder="Contraseña">
-                        </div>
-
-                        <div class="row align-items-center remember">
-                            <div>
-                                <!-- Remember me -->
-                                <div class="custom-control custom-checkbox justify-content-cente">
-                                    <input type='radio' class='chk' name='${rememberMeParameter}' id='remember_me'
-                                           <g:if test='${hasCookie}'>checked='checked'</g:if>/>
-                                    <label for='remember_me' class="text-info">Recordarme</label>
-                                </div>
-
-                                <div class="d-flex justify-content-center">
-                                    <g:if test='${flash.message}'> 
-                                        <div align="center " class='login_message text-danger'>${flash.message}</div>  
-                                    </g:if>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-    </div>
 
     <div class="bg-circle-5 bg-circle"></div>
 

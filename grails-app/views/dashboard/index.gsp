@@ -14,11 +14,22 @@
 </head>
 
 <body>
-<div class="container-fluid" id="datos">
-    <div>
-        <div class="row"><p>dgdfg</p></div>
-    </div>
-</div>
+<section id="dashboard">
+    <div class="container col-md-12 col-sm-12 col-xl-12 responsive">
+        <div class="row align-items-center">
 
+            <div class="col-lg-12 order-lg-1">
+                <div class="p-5">
+                    <h2 class="display-4">Bienvenido!!</h2>
+                    <h4 class="text-primary">{{ usuario.nombre }} {{ usuario.apPaterno }} {{ usuario.apMaterno }}</h4>
+
+                    <p>Te encuentras en la vista principal</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<asset:javascript src="dashboard/dashboard.js"/>
 </body>
 </html>
