@@ -24,8 +24,8 @@
                     <p>Te encuentras en la vista de publicaciones</p>
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                        Realizar publicación
-                    </button>
+                    Realizar publicación
+                </button>
 
                 </div>
             </div>
