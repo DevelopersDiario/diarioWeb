@@ -84,6 +84,15 @@ class UsuarioService {
         sql.close()
         return rows
     }
+    /*
+   * Buscar un usuario por nombre
+   * @param username: nomnbre de usuario de tipo string
+   * return regresa al usuario
+   */
 
+    def findByUsername(String username) {
+        def query = "SELECT * FROM usuario WHERE TRANSLATE(username,'ÁÉÍÓÚáéíóú','AEIOUaeiou') ILIKE translate('" + "${username}" + "','ÁÉÍÓÚáéíóú','AEIOUaeiou');"
+        return executeQuery(query);
+    }
 
 }
