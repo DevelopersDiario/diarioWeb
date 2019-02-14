@@ -23,9 +23,9 @@ class Persona {
         nombre nullable: true
         apPaterno nullable: true
         apMaterno nullable: true
-        strcuenta nullable: false
+        strcuenta nullable: true
         foto nullable: true
-        fotoPortada nullable: false
+        fotoPortada nullable: true
         correoElectronico nullable: true
         usuario nullable: false
         telefono nullable: true

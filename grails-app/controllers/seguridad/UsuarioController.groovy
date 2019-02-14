@@ -1,5 +1,6 @@
 package seguridad
 
+import amdi.PersonaService
 import diario.Persona
 import grails.converters.JSON
 import grails.plugin.springsecurity.annotation.Secured
@@ -10,6 +11,7 @@ import seguridad.UsuarioRol
 
 class UsuarioController {
     def usuarioService
+    def personaService
 
     def index() {}
     /**
@@ -37,21 +39,23 @@ class UsuarioController {
                 def user = Usuario.executeQuery("SELECT u FROM Usuario as u WHERE u.username = ?", [usuarioInstance.username]);
                     if (user.size() > 1) {
                         throw new Exception("Favor de verificar, el suasuario ${params.username.toUpperCase()} ya existe")
+                    } else {
+                        Persona persona = new Persona()
+                        persona.nombre = '--'
+                        persona.apPaterno = '---'
+                        persona.apMaterno = '--'
+                        persona.strcuenta = '--'
+                        persona.foto = '--'
+                        persona.fotoPortada = '--'
+                        persona.correoElectronico = '--'
+                        persona.telefono = '---'
+                        persona.telefonoOpcional = '---'
+                        persona.enabled = true
+                        persona.dateCreated = new Date()
+                        persona.lastUpdated = new Date()
+                        persona.usuario = usuarioInstance
+                        personaService.create(persona)
                     }
-                /* else {
-                     Persona persona = new Persona()
-                     persona.nombre = params.nombre ? params.nombre.toUpperCase() : '--'
-                     persona.apPaterno = params.appaterno ? params.appaterno.toUpperCase() : '---'
-                     persona.apMaterno = params.apmaterno ? params.apmaterno.toUpperCase() : '--'
-                     persona.correoElectronico = params.correo ? params.correo : '--'
-                     persona.telefono = params.telefono ? params.telefono : '---'
-                     persona.telefonoOpcional = params.telopcional ? params.telopcional : '---'
-                     persona.enabled = true
-                     persona.usuario = usuarioInstance
-                     usuarioService.create(persona)
-                 }*/
-
-
             }
             def data = [message: "Se creó correctamente el usuario ", type: "Satisfactorio", success: true]
             render data as JSON
