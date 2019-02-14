@@ -3,26 +3,33 @@
  */
 
 Vue.use(VeeValidate);
-var datos = new Vue({
-    el: "#registro",
+var registro = new Vue({
+    el: "#register",
     data: {
-        persona: {
+        user: {
             username: '',
-            nombre: '',
-            apPaterno: '',
-            apMaterno: '',
-            telefono: '',
-            correo: '',
-
+            password: '',
+            confirm: ''
         }
     },
     methods: {
-        savePersona: function () {
+        saveUsuario: function () {
 
+            if (registro.user.password != registro.user.confirm) {
+                swal("Las contraseñas no coinciden")
+            }
+            else {
+                $.post("../usuario/save", registro.user, function (data) {
+                    response = data
+                    alert(data)
+                }).done(function () {
+                    toastr("Registro Exitoso", "Success")
+
+                }).error(function () {
+                    toastr("Ha ocurrido un error", "Lo sentimos")
+
+                })
+            }
         },
     }
-});
-
-$(document).ready(function () {
-
 });

@@ -5,7 +5,6 @@ import grails.converters.JSON
 import grails.plugin.springsecurity.annotation.Secured
 import grails.transaction.Transactional
 import org.springframework.core.io.ResourceLoader
-
 @Transactional(readOnly = true)
 @Secured(['ROLE_ADMIN'])
 

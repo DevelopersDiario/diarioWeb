@@ -19,6 +19,7 @@ class UsuarioController {
      * @return true caso satisfactorio: false caso contrario.
      */
     def save() {
+        println("llega")
         try {
             UsuarioRol.withTransaction { status ->
                 if (usuarioService.findByUsername(params.username.toUpperCase()))
@@ -30,27 +31,26 @@ class UsuarioController {
                 if (params.password != params.confirm)
                     throw new Exception("La contraseña no coincide con la anterior, vuelva a escribirla!")
                 usuarioService.create(usuarioInstance)
-
                 def rolInstance = Rol.get(2 as long)
+                println(rolInstance)
                 UsuarioRol.findByRolAndUsuario(rolInstance, usuarioInstance) ?: new UsuarioRol(usuario: usuarioInstance, rol: rolInstance).save(flush: true)
-
-                if (params.rol == '2') {
-                    def user = Usuario.executeQuery("SELECT u FROM Usuario as u WHERE u.username = ?", [usuarioInstance.username]);
+                def user = Usuario.executeQuery("SELECT u FROM Usuario as u WHERE u.username = ?", [usuarioInstance.username]);
                     if (user.size() > 1) {
                         throw new Exception("Favor de verificar, el suasuario ${params.username.toUpperCase()} ya existe")
-                    } else {
-                        Persona persona = new Persona()
-                        persona.nombre = params.nombre ? params.nombre.toUpperCase() : '--'
-                        persona.apPaterno = params.appaterno ? params.appaterno.toUpperCase() : '---'
-                        persona.apMaterno = params.apmaterno ? params.apmaterno.toUpperCase() : '--'
-                        persona.correoElectronico = params.correo ? params.correo : '--'
-                        persona.telefono = params.telefono ? params.telefono : '---'
-                        persona.telefonoOpcional = params.telopcional ? params.telopcional : '---'
-                        persona.enabled = true
-                        persona.usuario = usuarioInstance
-                        usuarioService.create(persona)
                     }
-                }
+                /* else {
+                     Persona persona = new Persona()
+                     persona.nombre = params.nombre ? params.nombre.toUpperCase() : '--'
+                     persona.apPaterno = params.appaterno ? params.appaterno.toUpperCase() : '---'
+                     persona.apMaterno = params.apmaterno ? params.apmaterno.toUpperCase() : '--'
+                     persona.correoElectronico = params.correo ? params.correo : '--'
+                     persona.telefono = params.telefono ? params.telefono : '---'
+                     persona.telefonoOpcional = params.telopcional ? params.telopcional : '---'
+                     persona.enabled = true
+                     persona.usuario = usuarioInstance
+                     usuarioService.create(persona)
+                 }*/
+
 
             }
             def data = [message: "Se creó correctamente el usuario ", type: "Satisfactorio", success: true]

@@ -95,8 +95,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="modal" href="loginRegister"
-                           data-target="#loginRegister">Sign Up</a>
+                        <a class="nav-link" href="${createLink(controller: 'usuario', action: 'index')}">Sign Up</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="modal" href="loginForm" data-target="#loginForm">Log In</a>
@@ -238,6 +237,16 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+                        </div>
+                        <script type='text/javascript'>
+                            (function () {
+                                document.forms['loguin'].elements['j_username'].focus();
+                            })();
+                        </script>
+
                     </form>
                 </div>
 
@@ -246,76 +255,13 @@
     </div>
 
     <!-- Sing in-->
-    %{--<div class="form-group">--}%
-        %{--<button class="modal fade" type="submit" data-toggle="modal" data-target="#modalRegistrer" >Sign in</button>--}%
+    <div class="form-group">
+        <button class="modal fade" type="submit" data-toggle="modal" data-target="#modalRegistrer">Sign in</button>
     </div>
-    <div class="modal fade" id="loginRegister" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-         aria-hidden="true">
-        <div class="modal-dialog modal-sm modal-dialog-centered " role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalTitleRegister">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-
-                <div class="modal-body">
-                    <form action='${postUrl}' method='POST' id="signIn">
-
-                        <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-user"></i></span>
-                            </div>
-                            <input type="text" class="form-control" name='j_username' id='username2'
-                                   placeholder="Correo">
-                        </div>
-
-                        <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-key"></i></span>
-                            </div>
-                            <input type="password" class="form-control" name='j_password' id='password2'
-                                   placeholder="Contraseña">
-                        </div>
-                        <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-key"></i></span>
-                            </div>
-                            <input type="password" class="form-control" name='j_password' id='passwordconfirm'
-                                   placeholder="Confirme Contraseña">
-                        </div>
-
-                        <div class="row align-items-center remember">
-                            <div>
-                                <!-- Remember me -->
-                                <div class="custom-control custom-checkbox justify-content-cente">
-                                    <input type='radio' class='chk' name='${rememberMeParameter}' id='remember_me2'
-                                           <g:if test='${hasCookie}'>checked='checked'</g:if>/>
-                                    <label for='remember_me' class="text-info">Recordarme</label>
-                                </div>
-
-                                <div class="d-flex justify-content-center">
-                                    <g:if test='${flash.message}'> 
-                                        <div align="center " class='login_message text-danger'>${flash.message}</div>  
-                                    </g:if>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-    </div>
+    <asset:javascript src="registro/registro.js"/>
 
     <div class="bg-circle-5 bg-circle"></div>
 
 </header>
 
 
-<script type='text/javascript'>
-    (function () {
-        document.forms['loguin'].elements['j_username'].focus();
-    })();
-</script>
