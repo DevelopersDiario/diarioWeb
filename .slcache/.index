@@ -5483,3 +5483,17 @@ n:785:org/codehaus/groovy/runtime/dgm$311
 n:1823:grails/util/PluginBuildSettings$clearCache$9
 n:1377:java_util_Map$clear$6
 n:2444:org/codehaus/groovy/runtime/typehandling/GroovyCastException
+n:1964:org/codehaus/groovy/control/messages/SyntaxErrorMessage
+n:1774:org/codehaus/groovy/control/messages/Message
+n:2316:org/codehaus/groovy/syntax/SyntaxException
+n:1134:org/codehaus/groovy/GroovyException
+n:3175:org/codehaus/groovy/tools/ErrorReporter
+n:10790:script15501875550191244256615
+n:2804:script15501875550191244256615$_run_closure1
+n:2832:script15501875550191244256615$_run_closure1_closure4
+n:3080:script15501875550191244256615$_run_closure1_closure4_closure5
+n:2782:script15501875550191244256615$_run_closure1_closure4_closure5_closure6
+n:2935:script15501875550191244256615$_run_closure2
+n:2956:script15501875550191244256615$_run_closure2_closure7
+n:2956:script15501875550191244256615$_run_closure2_closure8
+n:3436:script15501875550191244256615$_run_closure3
