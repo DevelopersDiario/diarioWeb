@@ -10,6 +10,7 @@ class Publicacion {
     String conclusion
     String planAccion
     String titulo
+    boolean active
     String observaciones
     Date dateCreated
     Date lastUpdated
