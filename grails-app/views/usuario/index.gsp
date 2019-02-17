@@ -77,7 +77,7 @@
 <header class="masthead text-center text-white">
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
         <div class="container">
-            <img src="${resource(dir: 'images', file: 'didactico.png')}">
+            <img src="${resource(dir: 'images', file: 'didactico.png')}" style="height: 35px; width: 35px">
             <a class="navbar-brand text-info">Didactic</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
