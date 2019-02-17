@@ -68,7 +68,6 @@ var publicaciones = new Vue({
                 dangerMode: true,
             }).then((willDelete) = > {
                 if(willDelete) {
-                    //eliminando beneficiario
                     spinner = true;
                     publicaciones.listPublicaciones.splice(index, 1)
                 }
