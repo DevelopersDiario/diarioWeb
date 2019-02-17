@@ -13,15 +13,18 @@ class PublicacionController {
     def springSecurityService
     def usuarioRolService
     def publicacionService
+    def personaService
 
     def index() {}
 
     def savePublicacion() {
+        println(params)
         try {
             if (!params.titulo)
                 throw new Exception("debe Ingresar almenos el titulo de la publicacion")
             def currentUser = springSecurityService.currentUser
-            //def usuarioRol = usuarioRolService.findByUsuario(currentUser)
+            // def usuarioRol = usuarioRolService.findByUsuario(currentUser)
+            // def persona = personaService.findByUsuario(currentUser)
             Publicacion publicacion = new Publicacion()
             publicacion.titulo = params.titulo ? params.titulo : ''
             publicacion.sentimiento = params.sentimiento ? params.sentimiento : ''
@@ -41,6 +44,12 @@ class PublicacionController {
             def data = [message: "Ocurrio un error al crear el usuario! " + e.getMessage(), type: "Error", success: false]
             render data as JSON
         }
+    }
+
+    def updatePublicacion() {
+        println(params)
+        def currentUser = springSecurityService.currentUser
+
     }
 
 

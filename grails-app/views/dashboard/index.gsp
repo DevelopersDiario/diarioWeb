@@ -22,12 +22,12 @@
                 <div class="p-5">
                     <h2 class="display-4">Bienvenido!!</h2>
                     <h4 class="text-primary">{{ usuario.nombre }} {{ usuario.apPaterno }} {{ usuario.apMaterno }}</h4>
+                </div>
 
-                    <p>Te encuentras en la vista principal</p>
+            </div>
                 </div>
             </div>
-        </div>
-    </div>
+
 </section>
 
 <asset:javascript src="dashboard/dashboard.js"/>

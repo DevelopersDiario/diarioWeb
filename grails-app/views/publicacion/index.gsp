@@ -30,6 +30,40 @@
                 </button>
 
                 </div>
+
+                <div class="row-fluid">
+                    <!--Table-->
+                    <table class="table  table-responsive-md btn-table">
+                        <!--Table head-->
+                        <thead>
+                        <tr class="text-uppercase text-center">
+                            <th>id</th>
+                            <th>Titulo</th>
+                            <th>Sentimiento</th>
+                        </tr>
+                        </thead>
+                        <!--Table head-->
+                        <!--Table body-->
+                        <tbody>
+                        <tr v-for="(benef, index) in listPublicaciones" class="text-center "><span
+                                class="modal-title"></span>
+                            <td>{{benef.id}}</td>
+                            <td>{{benef.titulo}}</td>
+                            <td>
+                                <button class="btn-sm btn-unique" name="" @click="updatePublic(benef, index)">
+                                    <span class="fa fa-edit"></span></button>
+
+                                <button class="btn-sm btn-red" @click="removePublic(benef,index)">
+                                    <span class="fa fa-trash-alt"></span></button>
+
+                            </td>
+                        </tr>
+                        </tbody>
+                        <!--Table body-->
+                    </table>
+                    <!--Table-->
+
+                </div>
             </div>
         </div>
     </div>

@@ -25,4 +25,8 @@ class PersonaService {
         throw new Exception()
         return null
     }
+
+    def findByUsuario(PersonaIntance) {
+        return Persona.findByUsuario(PersonaIntance, true)
+    }
 }

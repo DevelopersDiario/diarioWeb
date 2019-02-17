@@ -15,6 +15,33 @@ var publicaciones = new Vue({
             planaccion: '',
             observaciones: '',
         },
+        listPublicaciones: [
+            {
+                id: 1,
+                titulo: 'Prueba de Publicación',
+                sentimiento: 'El día de hoy se realizan Las primeras pruebas de publicaciones, ' +
+                    'se tiene contemplado mostrar de forma dinamica todas las publicaciones',
+                evaluacion: 'Se tiene proyectado alojar imagenes, archivos, y videos',
+                analisis: '',
+                conclusion: '',
+                planaccion: '',
+                observaciones: '',
+            },
+            {
+                id: 2,
+                titulo: 'Publicación 2',
+                sentimiento: 'Se tendra contemplado mejorar todo el diseno, ' +
+                    'y estructura de la nueva version del proyecto',
+                evaluacion: 'Se tiene proyectado alojar imagenes, archivos, y videos',
+                analisis: '',
+                conclusion: '',
+                planaccion: '',
+                observaciones: '',
+            },
+
+        ]
+
+        ,
     },
     methods: {
         savePublicacion: function () {
@@ -32,5 +59,23 @@ var publicaciones = new Vue({
                 })
             }
         },
-    }
+        removePublic: (function (publicacion, index) {
+            swal({
+                title: "¿Esta seguro de eliminar la publicacion?",
+                text: "",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            }).then((willDelete) = > {
+                if(willDelete) {
+                    //eliminando beneficiario
+                    spinner = true;
+                    publicaciones.listPublicaciones.splice(index, 1)
+                }
+            }
+        )
+            ;
+
+        })
+    },
 });
