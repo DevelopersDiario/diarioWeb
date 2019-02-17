@@ -140,7 +140,7 @@
                     </svg>
 
                     <div class="slide__text">
-                        <h2 class="slide__text-heading"></h2>
+                        <h2 class="slide__text-heading">Comparte tus experiencias</h2>
 
                         <p class="slide__text-desc"></p>
                         <a
@@ -158,11 +158,11 @@
                     </svg>
 
                     <div class="slide__text">
-                        <h2 class="slide__text-heading"></h2>
+                        <h2 class="slide__text-heading">Retroalimenta a otros usuarios</h2>
 
                         <p class="slide__text-desc"></p>
                         <a href="${resource(dir: 'images', file: 'didactico.png')}"
-                           class="slide__text-link">Project link</a>
+                           class="slide__text-link"></a>
                     </div>
                 </div>
             </div>
@@ -178,7 +178,7 @@
                     <div class="slide__text">
                         <h2 class="slide__text-heading"></h2>
 
-                        <p class="slide__text-desc"></p>
+                        <p class="slide__text-desc">Aprende de las demás personas</p>
                         <a href="${resource(dir: 'images', file: 'didactico.png')}"
                            class="slide__text-link"></a>
                     </div>

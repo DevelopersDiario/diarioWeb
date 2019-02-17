@@ -69,13 +69,13 @@ var publicaciones = new Vue({
                 dangerMode: true,
             }).then((willDelete) = > {
                 if(willDelete) {
-                    spinner = true;
-                    publicaciones.listPublicaciones.splice(index, 1)
 
+                    publicaciones.listPublicaciones.splice(index, 1)
                 }
             }
         )
             ;
+
         },
 
     },
