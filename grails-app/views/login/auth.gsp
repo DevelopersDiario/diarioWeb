@@ -117,9 +117,9 @@
                 <div class="slide__bg"></div>
 
                 <div class="slide__content">
-                    <!--  <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                    <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
                         <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405"/>
-                    </svg>-->
+                    </svg>
 
                     <div class="slide__text">
                         <h2 class="slide__text-heading">DIDACTIC A.C</h2>
