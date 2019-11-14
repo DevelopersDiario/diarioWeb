@@ -17,7 +17,7 @@ class Persona {
     Date lastUpdated
     Boolean enabled
     static hasMany = [publicaciones: Publicacion, grupos: Grupo]
-    static belongsTo = [Grupo, Publicacion]
+    static belongsTo = [Grupo]
 
     static constraints = {
         nombre nullable: true

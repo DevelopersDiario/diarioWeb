@@ -17,6 +17,7 @@ class PublicacionController {
 
     def index() {}
 
+
     def savePublicacion() {
         println(params)
         try {

@@ -24,9 +24,8 @@
                     <a class=" nav-link " href="${createLink(controller: 'publicacion', action: 'index')}"><i
                             class="fas fa-laptop" style="font-size:20px;" aria-hidden="true"></i> Mis publicaciones</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="modal" href="loginRegister"
-                       data-target="#loginRegister">Mi perfil</a>
+                <li class="nav-item ${controllerName.equals('perfil') ? 'active' : ''}">
+                    <a class="nav-link" href="${createLink(controller: 'perfil', action: 'index')}">Mi perfil</a>
                 </li>
                 <li class="nav-item">
                     <a class=" nav-link" href="${createLink(controller: 'logout', action: 'index')}"><i

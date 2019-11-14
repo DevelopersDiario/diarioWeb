@@ -14,7 +14,7 @@ class Publicacion {
     String observaciones
     Date dateCreated
     Date lastUpdated
-    static hasMany = [publicaciones: Publicacion]
+    Publicacion publicacion
     static constraints = {
         usuario nullable: false
         sentimiento nullable: true
@@ -24,7 +24,8 @@ class Publicacion {
         planAccion nullable: true
         titulo nullable: true
         observaciones nullable: true
-        publicaciones nullable: true
+        publicacion nullable: true
+
     }
     static mapping = {
         id generator: 'increment'

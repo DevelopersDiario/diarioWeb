@@ -60,23 +60,23 @@ var publicaciones = new Vue({
             }
         },
 
-        removePublic: function (benef, index) {
-            swal({
-                title: "¿Esta seguro de eliminar la publicacón?",
-                text: "",
-                icon: "warning",
-                buttons: true,
-                dangerMode: true,
-            }).then((willDelete) = > {
-                if(willDelete) {
+        /*    removePublic: function (benef, index) {
+                swal({
+                    title: "¿Esta seguro de eliminar la publicacón?",
+                    text: "",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                }).then((willDelete) = > {
+                    if(willDelete) {
 
-                    publicaciones.listPublicaciones.splice(index, 1)
+                        publicaciones.listPublicaciones.splice(index, 1)
+                    }
                 }
-            }
-        )
-            ;
+            )
+                ;
 
-        },
+            },*/
 
     },
 

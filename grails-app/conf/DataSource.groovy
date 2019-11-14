@@ -21,7 +21,7 @@ environments {
     development {
         dataSource {
             dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
-           url = "jdbc:postgresql://localhost/diarioweb"
+           url = "jdbc:postgresql://localhost/diario"
            // url = "jdbc:msql://localhost/diarioweb"
            //url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
         }
